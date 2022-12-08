@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorite Hobby</title>
+    <style>
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/264/original/katie-rainbow.jpg?1670096871");
+        background-repeat: no-repeat;
+        font-family: cursive;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        transition: all 150ms ease-in-out;
+      }
+
+      img:hover {
+        transform: scale(1.2);
+      }
+
+      p {
+        line-height: 2;
+        font-size: 18px;
+        margin: 5px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button.theme {
+        display: block;
+        font-size: 18px;
+        background: white;
+        color: black;
+        padding: 5px 8px;
+        margin: 5px auto;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button.theme:hover {
+        cursor: pointer;
+        font-size: 18px;
+        background: black;
+        color: white;
+        padding: 5px 8px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+      }
+
+      button.contact {
+        display: block;
+        font-size: 18px;
+        background: rgb(251, 201, 210);
+        color: black;
+        padding: 5px 8px;
+        margin: 8px auto;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #030303;
+        transition: all 150ms ease-in-out;
+      }
+
+      button.contact:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+
+      footer {
+        font-size: 18px;
+        text-align: center;
+        margin: 20px;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.5);
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr 1fr);
+        grid-gap: 10px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .grid img:hover {
+        transform: scale(2) rotate(10deg);
+      }
+
+      .dark {
+        background: rgba(34, 29, 29, 0.9);
+        color: rgb(251, 201, 210);
+      }
+
+      .dark .container {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .dark a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme">Dark Theme</button>
+    <div class="container">
+      <h1>❤️❤️Roller Skating❤️❤️</h1>
+      <h2>My Favorite Hobby</h2>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/269/original/rollerdisco.jpg?1670097031"
+        alt=""
+      />
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/280/original/redskates.jpg?1670109899"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/279/original/pinkskates.jpg?1670109886"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/278/original/inline-skates.jpg?1670109872"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/267/original/skatingrink.jpg?1670096901"
+          alt=""
+        />
+      </div>
+      <p>
+        Roller skating is a fun and exciting hobby of mine that takes me back to
+        my early childhood. Music, lights, disco balls and of course... roller
+        skates. I would have birthday parties there and gather there with my
+        friends on the weekends. Even now as an adult I still enjoy going to the
+        roller rink and skating. Although I'm not as good at it as I once was
+        😅.
+      </p>
+      <button class="contact">Get in touch</button>
+    </div>
+    <footer>
+      👩🏽‍💻Coded by
+      <a href="https://www.shecodes.io/graduates/65220-jacqueline-mason"
+        >Jacqueline ❤️ Mason</a
+      >
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        let themeButton = document.querySelector(".theme");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+          themeButton.innerHTML = "Dark Theme";
+        } else {
+          body.classList.add("dark");
+          themeButton.innerHTML = "Light Theme";
+        }
+      }
+
+      function contactMe() {
+        let contactButton = document.querySelector(".contact");
+
+        let name = prompt("What is your name?");
+
+        alert(
+          "Hello, " +
+            name +
+            "! Like what you see? Feel free to see more on my SheCodes profile at https://www.shecodes.io/graduates/65220-jacqueline-mason"
+        );
+      }
+
+      let themeButton = document.querySelector(".theme");
+      themeButton.addEventListener("click", changeTheme);
+
+      let contactButton = document.querySelector(".contact");
+      contactButton.addEventListener("click", contactMe);
+    </script>
+  </body>
+</html>
